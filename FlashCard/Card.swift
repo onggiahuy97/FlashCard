@@ -12,9 +12,11 @@ import SwiftData
 @Model class Topic {
     var name: String
     var cards: [Card] = []
+    var createdDate: Date
     
     init(name: String = "") {
         self.name = name
+        createdDate = Date()
     }
 }
 
@@ -27,7 +29,7 @@ extension Topic {
 @Model class Card {
     var fontContent: String
     var backContent: String
-    let createdDate: Date
+    var createdDate: Date
     
     init(fontContent: String = "", backContent: String = "") {
         self.fontContent = fontContent

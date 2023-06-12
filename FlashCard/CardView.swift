@@ -31,7 +31,6 @@ struct CardView: View {
                 }
                 .bold()
                 .foregroundStyle(isFont ? card.color.gradient : Color.secondary.opacity(0.65).gradient)
-                .shadow(radius: 1)
         }
         .frame(height: 250)
         .rotation3DEffect(

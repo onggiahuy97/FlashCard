@@ -14,6 +14,8 @@ struct DetailListCardView: View {
     
     @State private var showAddingNewCard = false
     @State private var columns: [GridItem] = [GridItem(.flexible())]
+    @State private var isRenaming = false
+    @State private var name = ""
     
     var body: some View {
         ScrollView {
@@ -37,6 +39,13 @@ struct DetailListCardView: View {
             ToolbarItem(placement: .topBarLeading) {
                 Menu {
                     Button {
+                        name = topic.name
+                        isRenaming = true
+                    } label: {
+                        Label("Rename Topic", systemImage: "pencil.line")
+                    }
+                    
+                    Button {
                         columns = [GridItem(.flexible())]
                     } label: {
                         Label("Default", systemImage: "rectangle.grid.1x2")
@@ -54,6 +63,12 @@ struct DetailListCardView: View {
         .sheet(isPresented: $showAddingNewCard) {
             AddNewCardView(topic: topic)
                 .presentationDetents([.medium, .large])
+        }
+        .alert("Rename", isPresented: $isRenaming) {
+            TextField("Name", text: $name)
+            Button("Save", role: .destructive) {
+                topic.name = name
+            }
         }
     }
 }

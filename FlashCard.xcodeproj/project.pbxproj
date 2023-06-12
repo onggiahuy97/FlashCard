@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59C0ADEB2A37CD6400F942C1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */; };
 		59C69B162A3404DE0074DCA9 /* FlashCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B152A3404DE0074DCA9 /* FlashCardApp.swift */; };
 		59C69B182A3404DE0074DCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B172A3404DE0074DCA9 /* ContentView.swift */; };
 		59C69B1A2A3404DF0074DCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59C69B192A3404DF0074DCA9 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		59C69B122A3404DE0074DCA9 /* FlashCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C69B152A3404DE0074DCA9 /* FlashCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardApp.swift; sourceTree = "<group>"; };
 		59C69B172A3404DE0074DCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				59C69B272A344C300074DCA9 /* AddNewCardView.swift */,
 				59C69B292A344FDD0074DCA9 /* CardView.swift */,
 				59C69B232A3404F50074DCA9 /* Card.swift */,
+				59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */,
 				59C69B192A3404DF0074DCA9 /* Assets.xcassets */,
 				59C69B1B2A3404DF0074DCA9 /* Preview Content */,
 			);
@@ -157,6 +160,7 @@
 				59FE2B292A366773002D68A3 /* TopicListView.swift in Sources */,
 				59C69B262A34468C0074DCA9 /* DetailListCardView.swift in Sources */,
 				59C69B242A3404F50074DCA9 /* Card.swift in Sources */,
+				59C0ADEB2A37CD6400F942C1 /* WelcomePage.swift in Sources */,
 				59C69B2A2A344FDD0074DCA9 /* CardView.swift in Sources */,
 				59C69B162A3404DE0074DCA9 /* FlashCardApp.swift in Sources */,
 			);
