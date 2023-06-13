@@ -16,6 +16,7 @@
 		59C69B262A34468C0074DCA9 /* DetailListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B252A34468C0074DCA9 /* DetailListCardView.swift */; };
 		59C69B282A344C300074DCA9 /* AddNewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B272A344C300074DCA9 /* AddNewCardView.swift */; };
 		59C69B2A2A344FDD0074DCA9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B292A344FDD0074DCA9 /* CardView.swift */; };
+		59C769C12A38DA780036F995 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C769C02A38DA780036F995 /* EditCardView.swift */; };
 		59FE2B292A366773002D68A3 /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE2B282A366773002D68A3 /* TopicListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		59C69B252A34468C0074DCA9 /* DetailListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCardView.swift; sourceTree = "<group>"; };
 		59C69B272A344C300074DCA9 /* AddNewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardView.swift; sourceTree = "<group>"; };
 		59C69B292A344FDD0074DCA9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		59C769C02A38DA780036F995 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
 		59FE2B282A366773002D68A3 /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				59C69B252A34468C0074DCA9 /* DetailListCardView.swift */,
 				59FE2B282A366773002D68A3 /* TopicListView.swift */,
 				59C69B272A344C300074DCA9 /* AddNewCardView.swift */,
+				59C769C02A38DA780036F995 /* EditCardView.swift */,
 				59C69B292A344FDD0074DCA9 /* CardView.swift */,
 				59C69B232A3404F50074DCA9 /* Card.swift */,
 				59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */,
@@ -158,6 +161,7 @@
 				59C69B182A3404DE0074DCA9 /* ContentView.swift in Sources */,
 				59C69B282A344C300074DCA9 /* AddNewCardView.swift in Sources */,
 				59FE2B292A366773002D68A3 /* TopicListView.swift in Sources */,
+				59C769C12A38DA780036F995 /* EditCardView.swift in Sources */,
 				59C69B262A34468C0074DCA9 /* DetailListCardView.swift in Sources */,
 				59C69B242A3404F50074DCA9 /* Card.swift in Sources */,
 				59C0ADEB2A37CD6400F942C1 /* WelcomePage.swift in Sources */,

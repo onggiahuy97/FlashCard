@@ -30,6 +30,7 @@ extension Topic {
     var fontContent: String
     var backContent: String
     var createdDate: Date
+    var topic: Topic?
     
     init(fontContent: String = "", backContent: String = "") {
         self.fontContent = fontContent

@@ -50,6 +50,7 @@ struct TopicListView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
+                        .disabled(topics.isEmpty)
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {

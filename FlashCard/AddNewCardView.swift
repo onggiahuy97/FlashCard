@@ -36,6 +36,7 @@ struct AddNewCardView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
                         let card = Card(fontContent: fontContent, backContent: backContent)
+                        card.topic = topic
                         modelContext.insert(card)
                         topic.cards.append(card)
                         dismiss()
