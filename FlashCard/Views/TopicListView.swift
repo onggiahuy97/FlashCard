@@ -22,6 +22,19 @@ struct TopicListView: View {
         }
     }
     
+    var searchView: some View {
+        ForEach(filteredTopics) { topic in
+            NavigationLink(topic.name, value: topic)
+                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                    Button(role: .destructive) {
+                        modelContext.delete(object: topic)
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             List {
@@ -38,16 +51,7 @@ struct TopicListView: View {
                 .onDelete(perform: deleteTopics(at:))
             }
             .searchable(text: $searchText, prompt: "Search") {
-                ForEach(filteredTopics) { topic in
-                    NavigationLink(topic.name, value: topic)
-                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                            Button(role: .destructive) {
-                                modelContext.delete(object: topic)
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }
-                }
+                searchView
             }
             .navigationTitle("Topics")
             .toolbar {
