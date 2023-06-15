@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59C0ADEB2A37CD6400F942C1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */; };
+		5992800C2A3A8DFC004EAA68 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5992800B2A3A8DFC004EAA68 /* Topic.swift */; };
 		59C69B162A3404DE0074DCA9 /* FlashCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B152A3404DE0074DCA9 /* FlashCardApp.swift */; };
 		59C69B182A3404DE0074DCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C69B172A3404DE0074DCA9 /* ContentView.swift */; };
 		59C69B1A2A3404DF0074DCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59C69B192A3404DF0074DCA9 /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		5992800B2A3A8DFC004EAA68 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		59C69B122A3404DE0074DCA9 /* FlashCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C69B152A3404DE0074DCA9 /* FlashCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardApp.swift; sourceTree = "<group>"; };
 		59C69B172A3404DE0074DCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +46,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		599280092A3A8DDE004EAA68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59C69B172A3404DE0074DCA9 /* ContentView.swift */,
+				59C69B252A34468C0074DCA9 /* DetailListCardView.swift */,
+				59FE2B282A366773002D68A3 /* TopicListView.swift */,
+				59C69B272A344C300074DCA9 /* AddNewCardView.swift */,
+				59C769C02A38DA780036F995 /* EditCardView.swift */,
+				59C69B292A344FDD0074DCA9 /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5992800A2A3A8DE9004EAA68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59C69B232A3404F50074DCA9 /* Card.swift */,
+				5992800B2A3A8DFC004EAA68 /* Topic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		59C69B092A3404DE0074DCA9 = {
 			isa = PBXGroup;
 			children = (
@@ -65,15 +87,9 @@
 		59C69B142A3404DE0074DCA9 /* FlashCard */ = {
 			isa = PBXGroup;
 			children = (
+				5992800A2A3A8DE9004EAA68 /* Models */,
+				599280092A3A8DDE004EAA68 /* Views */,
 				59C69B152A3404DE0074DCA9 /* FlashCardApp.swift */,
-				59C69B172A3404DE0074DCA9 /* ContentView.swift */,
-				59C69B252A34468C0074DCA9 /* DetailListCardView.swift */,
-				59FE2B282A366773002D68A3 /* TopicListView.swift */,
-				59C69B272A344C300074DCA9 /* AddNewCardView.swift */,
-				59C769C02A38DA780036F995 /* EditCardView.swift */,
-				59C69B292A344FDD0074DCA9 /* CardView.swift */,
-				59C69B232A3404F50074DCA9 /* Card.swift */,
-				59C0ADEA2A37CD6400F942C1 /* WelcomePage.swift */,
 				59C69B192A3404DF0074DCA9 /* Assets.xcassets */,
 				59C69B1B2A3404DF0074DCA9 /* Preview Content */,
 			);
@@ -159,12 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59C69B182A3404DE0074DCA9 /* ContentView.swift in Sources */,
+				5992800C2A3A8DFC004EAA68 /* Topic.swift in Sources */,
 				59C69B282A344C300074DCA9 /* AddNewCardView.swift in Sources */,
 				59FE2B292A366773002D68A3 /* TopicListView.swift in Sources */,
 				59C769C12A38DA780036F995 /* EditCardView.swift in Sources */,
 				59C69B262A34468C0074DCA9 /* DetailListCardView.swift in Sources */,
 				59C69B242A3404F50074DCA9 /* Card.swift in Sources */,
-				59C0ADEB2A37CD6400F942C1 /* WelcomePage.swift in Sources */,
 				59C69B2A2A344FDD0074DCA9 /* CardView.swift in Sources */,
 				59C69B162A3404DE0074DCA9 /* FlashCardApp.swift in Sources */,
 			);

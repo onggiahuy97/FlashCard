@@ -10,8 +10,6 @@ import SwiftUI
 struct EditCardView: View {
     var card: Card
     
-    @Environment(\.modelContext) private var context
-    
     @State private var fontContent: String
     @State private var backContent: String
     
@@ -39,6 +37,10 @@ struct EditCardView: View {
                     HStack {
                         Button("Cancel", role: .destructive, action: dismiss.callAsFunction)
                         Button("Delete") {
+                            if let topic = card.topic,
+                               let index = topic.cards.firstIndex(where: { $0.objectID == card.objectID }) {
+                                topic.cards.remove(at: index)
+                            }
                             dismiss()
                         }
                     }

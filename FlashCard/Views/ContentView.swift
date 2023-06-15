@@ -9,12 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            TopicListView()
-                .tabItem {
-                    Label("Home", systemImage: "list.bullet.rectangle.portrait")
-                }
-        }
+        TopicListView()
     }
 }
 

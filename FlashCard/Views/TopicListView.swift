@@ -8,28 +8,19 @@
 import SwiftUI
 import SwiftData
 
-actor PreviewSampleData {
-    @MainActor
-    static var container: ModelContainer = {
-        let schema = Schema([Topic.self])
-        let configuration = ModelConfiguration(inMemory: true)
-        let container = try! ModelContainer(for: schema, configurations: [configuration])
-        let sampleData: [any PersistentModel] = [
-            Topic.preview
-        ]
-        sampleData.forEach {
-            container.mainContext.insert($0)
-        }
-        return container
-    }()
-}
-
 struct TopicListView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query(sort: \.createdDate, order: .reverse, animation: .default)
     private var topics: [Topic]
     
+    @State private var searchText = ""
+    
+    var filteredTopics: [Topic] {
+        return topics.filter { topic in
+            searchText.isEmpty || topic.name.lowercased().contains(searchText.lowercased())
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -45,6 +36,18 @@ struct TopicListView: View {
                         }
                 }
                 .onDelete(perform: deleteTopics(at:))
+            }
+            .searchable(text: $searchText, prompt: "Search") {
+                ForEach(filteredTopics) { topic in
+                    NavigationLink(topic.name, value: topic)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                modelContext.delete(object: topic)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                }
             }
             .navigationTitle("Topics")
             .toolbar {
